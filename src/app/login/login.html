@@ -259,11 +259,11 @@
             <p class="section-subtitle">Join hundreds of successful restaurants already using RestroHub</p>
             
             <div class="auth-buttons">
-                <div class="auth-card">
+                <!-- <div class="auth-card">
                     <h3>🚀 New Restaurant?</h3>
                     <p>Create your account now and get started with a 14-day free trial. No credit card required.</p>
                     <button class="btn btn-primary" (click)="openModal('signupModal')">Sign Up Now</button>
-                </div>
+                </div> -->
 
                 <div class="auth-card">
                     <h3>👤 Existing User?</h3>
@@ -283,7 +283,7 @@
     <!-- Footer -->
     <footer>
         <div class="footer-content">
-            <p>&copy; 2024 RestroHub. All rights reserved.</p>
+            <p>&copy; 2026 Billo. All rights reserved.</p>
             <div class="footer-links">
                 <a href="#">Privacy Policy</a>
                 <a href="#">Terms of Service</a>
@@ -315,13 +315,13 @@
                     </label>
                     <a href="#" style="color: var(--primary); text-decoration: none;">Forgot Password?</a>
                 </div>
-                <button class="btn btn-primary" style="width: 100%;">Login</button>
+                <button class="btn btn-primary" style="width: 100%;" (click)="loginClick()">Login</button>
                 <p style="text-align: center; color: var(--text-light);">Don't have an account? <a href="#" style="color: var(--primary); cursor: pointer;" (click)="closeModel('loginModal'); openModal('signupModal')">Sign Up</a></p>
             </form>
         </div>
     </div>
 
-    <div id="signupModal" class="modal">
+    <!-- <div id="signupModal" class="modal">
         <div class="modal-content">
             <span class="close" (click)="closeModel('signupModal')">&times;</span>
             <h2 class="modal-title">Create Your Account</h2>
@@ -354,7 +354,7 @@
                 <p style="text-align: center; color: var(--text-light);">Already have an account? <a href="#" style="color: var(--primary); cursor: pointer;" (click)="closeModel('signupModal'); openModal('loginModal')">Login</a></p>
             </form>
         </div>
-    </div>
+    </div> -->
 
     <div id="demoModal" class="modal">
         <div class="modal-content">
