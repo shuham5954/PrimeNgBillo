@@ -1,0 +1,473 @@
+
+    <!-- Navbar -->
+    <nav>
+        <div class="nav-container">
+            <a href="#" class="logo">Billo</a>
+            <ul class="nav-links" id="navLinks" [ngClass]="{active: openMobileMenenu}">
+                <li><a (click)="scrollTo('products')">Products</a></li>
+                <li><a (click)="scrollTo('features')">Features</a></li>
+                <li><a (click)="scrollTo('pricing')">Pricing</a></li>
+                <li><a (click)="scrollTo('contact')">Contact</a></li>
+                <li  [ngClass]="{active: openMobileMenenu}" class="mobile-auth">
+                    <button class="btn btn-outline" (click)="openModal('loginModal')" style="width: 100%; margin-bottom: 0.5rem;">Login</button>
+                </li>
+                <!-- <li [ngClass]="{active: openMobileMenenu}" class="mobile-auth">
+                    <button class="btn btn-primary" (click)="openModal('signupModal')" style="width: 100%;">Sign Up</button>
+                </li> -->
+            </ul>
+            <div class="nav-buttons" id="navButtons">
+                <!-- <button class="btn btn-outline" (click)="openModal('loginModal')">Login</button> -->
+                 <p>{{loginclick}}</p>
+                <button class="btn btn-primary "(click)="openModal('loginModal')">Login</button>
+            </div>
+            <div class="hamburger active" id="hamburger" [ngClass]="{active: openMobileMenenu}" (click)="toggleMenu()">
+                <span></span>
+                <span></span>
+                <span></span>
+            </div>
+        </div>
+    </nav>
+
+    <!-- Hero Section -->
+    <section class="hero">
+        <div class="hero-content">
+            <img src="icon/teamdiscussion.svg" alt="Team Discussion" class="hero-img">
+            <h1>Empower Your Restaurant with Smart POS Solutions</h1>
+            <p>Manage orders, inventory, and customers seamlessly. Everything your restaurant needs to grow.</p>
+            <div class="hero-buttons">
+                <button class="btn btn-primary" (click)="openModal('demoModal')">Request Demo</button>
+                <!-- <button class="btn btn-outline" (click)="scrollToSection('products')">Explore Products</button> -->
+            </div>
+        </div>
+    </section>
+
+    <!-- Products Overview -->
+    <section class="products" id="products">
+        <div class="products-grid">
+            <h2 class="section-title" style="grid-column: 1/-1;">Our Products</h2>
+            <p class="section-subtitle" style="grid-column: 1/-1;">Complete solutions tailored for modern restaurants</p>
+            
+            <div class="product-card">
+                <div class="product-icon">
+                      <img src="icon/posOrderManagement.svg" alt="">
+                </div>
+                <h3>POS System</h3>
+                <p>Lightning-fast billing with multi-terminal support, digital payment integration, and real-time transaction tracking.</p>
+                <button class="btn btn-outline">Learn More</button>
+            </div>
+
+            <div class="product-card">
+                <div class="product-icon">
+                    <img src="icon/orderAnalisis.svg" alt="">
+                </div>
+                <h3>Analytics Hub</h3>
+                <p>Gain insights with detailed reports on sales, inventory, customer behavior, and profitability metrics.</p>
+                <button class="btn btn-outline">Learn More</button>
+            </div>
+
+            <div class="product-card">
+                <div class="product-icon">
+                    <img src="icon/customerLoyalti.svg" alt="">
+                </div>
+                <h3>Customer Loyalty</h3>
+                <p>Build lasting relationships with automated loyalty programs, special offers, and personalized promotions.</p>
+                <button class="btn btn-outline">Learn More</button>
+            </div>
+
+            <div class="product-card">
+                <div class="product-icon">
+                  <img src="icon/orderManagemnt.svg" alt="">
+                </div>
+                <h3>Order Management</h3>
+                <p>Streamline kitchen operations with kitchen display system, table management, and delivery integration.</p>
+                <button class="btn btn-outline">Learn More</button>
+            </div>
+        </div>
+    </section>
+
+    <!-- Features -->
+    <section class="features" id="features">
+        <div class="features-container">
+            <h2 class="section-title">Why Choose RestroHub?</h2>
+            <p class="section-subtitle">Powerful features designed for restaurant success</p>
+            
+            <div class="features-grid">
+                <div class="feature-item">
+                    <h4>⚡ Fast & Reliable</h4>
+                    <p>99.9% uptime guarantee. Lightning-fast performance even during peak hours.</p>
+                </div>
+
+                <div class="feature-item">
+                    <h4>🔒 Secure & Compliant</h4>
+                    <p>Bank-level encryption, PCI-DSS compliance, and regular security audits.</p>
+                </div>
+
+                <div class="feature-item">
+                    <h4>🌐 Cloud-Based</h4>
+                    <p>Access your data anytime, anywhere. Automatic backups and no installation needed.</p>
+                </div>
+
+                <div class="feature-item">
+                    <h4>🔗 Easy Integration</h4>
+                    <p>Seamless integration with popular payment gateways and delivery platforms.</p>
+                </div>
+
+                <div class="feature-item">
+                    <h4>📞 24/7 Support</h4>
+                    <p>Dedicated support team ready to help via chat, email, or phone anytime.</p>
+                </div>
+
+                <div class="feature-item">
+                    <h4>📈 Scalable Solution</h4>
+                    <p>Grow from single location to multi-store empire with our flexible platform.</p>
+                </div>
+
+                <div class="feature-item">
+                    <h4>💳 Multiple Payments</h4>
+                    <p>Accept cards, digital wallets, UPI, cash, and more. Instant settlement.</p>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- Pricing -->
+    <section class="pricing" id="pricing">
+        <div class="pricing-container">
+            <h2 class="section-title">Transparent Pricing</h2>
+            <p class="section-subtitle">Choose the perfect plan for your restaurant</p>
+            
+            <div class="pricing-cards">
+                <div class="pricing-card">
+                    <h3>Starter</h3>
+                    <div class="price">₹999</div>
+                    <p class="price-period">per month</p>
+                    <p style="color: var(--text-light); margin: 1rem 0;">Perfect for small eateries</p>
+                    <ul class="pricing-features">
+                        <li>1 Billing Terminal</li>
+                        <li>5 Menu Items</li>
+                        <li>Basic Reports</li>
+                        <li>Email Support</li>
+                        <li>Cloud Storage</li>
+                    </ul>
+                    <button class="btn btn-outline" (click)="openModal('demoModal')">Get Started</button>
+                </div>
+
+                <div class="pricing-card featured">
+                    <h3>Professional</h3>
+                    <div class="price">₹2,999</div>
+                    <p class="price-period">per month</p>
+                    <p style="color: var(--text-light); margin: 1rem 0;">Most Popular</p>
+                    <ul class="pricing-features">
+                        <li>5 Billing Terminals</li>
+                        <li>Unlimited Menu Items</li>
+                        <li>Advanced Analytics</li>
+                        <li>Priority Support</li>
+                        <li>Inventory Manager</li>
+                        <li>Loyalty Program</li>
+                    </ul>
+                    <button class="btn btn-primary" (click)="openModal('demoModal')">Start Free Trial</button>
+                </div>
+
+                <div class="pricing-card">
+                    <h3>Enterprise</h3>
+                    <div class="price">Custom</div>
+                    <p class="price-period">per month</p>
+                    <p style="color: var(--text-light); margin: 1rem 0;">For large chains</p>
+                    <ul class="pricing-features">
+                        <li>Unlimited Terminals</li>
+                        <li>Multi-Location Support</li>
+                        <li>Custom Integrations</li>
+                        <li>Dedicated Account Manager</li>
+                        <li>API Access</li>
+                        <li>On-Premise Option</li>
+                    </ul>
+                    <button class="btn btn-outline" (click)="openModal('demoModal')">Contact Sales</button>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- Contact Section -->
+    <section class="contact" id="contact">
+        <div class="contact-container">
+            <h2 class="section-title">Get In Touch</h2>
+            <p class="section-subtitle">Have questions? We're here to help</p>
+            
+            <div class="contact-grid">
+                <form style="display: flex; flex-direction: column; gap: 1.5rem;">
+                    <div class="form-group">
+                        <label>Your Name</label>
+                        <input type="text" placeholder="Enter your name" required>
+                    </div>
+                    <div class="form-group">
+                        <label>Email Address</label>
+                        <input type="email" placeholder="your@email.com" required>
+                    </div>
+                    <div class="form-group">
+                        <label>Restaurant Name</label>
+                        <input type="text" placeholder="Your restaurant name">
+                    </div>
+                    <div class="form-group">
+                        <label>Message</label>
+                        <textarea placeholder="Tell us about your needs..." required></textarea>
+                    </div>
+                    <button class="btn btn-primary" type="submit">Send Message</button>
+                </form>
+
+                <div class="contact-info">
+                    <div class="info-item">
+                        <div class="info-icon">📞</div>
+                        <div>
+                            <h4>Phone</h4>
+                            <p>+91 1234 567 890</p>
+                        </div>
+                    </div>
+                    <div class="info-item">
+                        <div class="info-icon"><img src="icon/gmail-com.svg" style="width: 20px; height: 20px;" alt=""></div>
+                        <div>
+                            <h4>Email</h4>
+                            <p>support@restrohub.com</p>
+                        </div>
+                    </div>
+                    <div class="info-item">
+                        <div class="info-icon">
+                            <img src="icon/location-com.svg" style="width: 20px; height: 20px;" alt="location icon">
+                        </div>
+                        <div>
+                            <h4>Address</h4>
+                            <p>Tech Hub, Gandhinagar<br>Gujarat, India</p>
+                        </div>
+                    </div>
+                    <div class="info-item">
+                        <div class="info-icon">
+                            <img src="icon/time-com.svg" style="width: 20px; height: 20px;" alt="">
+                        </div>
+                        <div>
+                            <h4>Business Hours</h4>
+                            <p>Mon - Fri: 9:00 AM - 6:00 PM<br>Sat: 10:00 AM - 4:00 PM</p>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- Auth Section -->
+    <section class="auth-section" id="auth">
+        <div class="auth-container">
+            <h2 class="section-title">Ready to Transform Your Restaurant?</h2>
+            <p class="section-subtitle">Join hundreds of successful restaurants already using RestroHub</p>
+            
+            <div class="auth-buttons">
+                <div class="auth-card">
+                    <h3>🚀 New Restaurant?</h3>
+                    <p>Create your account now and get started with a 14-day free trial. No credit card required.</p>
+                    <button class="btn btn-primary" (click)="openModal('signupModal')">Sign Up Now</button>
+                </div>
+
+                <div class="auth-card">
+                    <h3>👤 Existing User?</h3>
+                    <p>Access your dashboard to manage your restaurant operations and view real-time analytics.</p>
+                    <button class="btn btn-secondary" (click)="openModal('loginModal')">Login</button>
+                </div>
+
+                <div class="auth-card">
+                    <h3>🎥 Want a Demo?</h3>
+                    <p>See RestroHub in action. Our experts will guide you through features tailored to your needs.</p>
+                    <button class="btn btn-outline" (click)="openModal('demoModal')">Request Demo</button>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- Footer -->
+    <footer>
+        <div class="footer-content">
+            <p>&copy; 2024 RestroHub. All rights reserved.</p>
+            <div class="footer-links">
+                <a href="#">Privacy Policy</a>
+                <a href="#">Terms of Service</a>
+                <a href="#">Contact Us</a>
+                <a href="#">Blog</a>
+                <a href="#">FAQ</a>
+            </div>
+        </div>
+    </footer>
+
+    <!-- Modals -->
+    <div id="loginModal loginModalClass" class="modal" [ngClass]="{loginModalClass:loginclick}">
+       
+        <div class="modal-content">
+            <span class="close" (click)="closeModel('loginModal')">&times;</span>
+            <h2 class="modal-title">Login to Your Account</h2>
+            <form style="display: flex; flex-direction: column; gap: 1rem;">
+                <div class="form-group">
+                    <label>Email</label>
+                    <input type="email" placeholder="your@email.com" required>
+                </div>
+                <div class="form-group">
+                    <label>Password</label>
+                    <input type="password" placeholder="••••••••" required>
+                </div>
+                <div style="display: flex; justify-content: space-between; align-items: center; gap: 1rem;">
+                    <label style="display: flex; gap: 0.5rem; margin: 0;">
+                        <input type="checkbox"> Remember me
+                    </label>
+                    <a href="#" style="color: var(--primary); text-decoration: none;">Forgot Password?</a>
+                </div>
+                <button class="btn btn-primary" style="width: 100%;">Login</button>
+                <p style="text-align: center; color: var(--text-light);">Don't have an account? <a href="#" style="color: var(--primary); cursor: pointer;" (click)="closeModel('loginModal'); openModal('signupModal')">Sign Up</a></p>
+            </form>
+        </div>
+    </div>
+
+    <div id="signupModal" class="modal">
+        <div class="modal-content">
+            <span class="close" (click)="closeModel('signupModal')">&times;</span>
+            <h2 class="modal-title">Create Your Account</h2>
+            <form style="display: flex; flex-direction: column; gap: 1rem;">
+                <div class="form-group">
+                    <label>Full Name</label>
+                    <input type="text" placeholder="John Doe" required>
+                </div>
+                <div class="form-group">
+                    <label>Restaurant Name</label>
+                    <input type="text" placeholder="Your Restaurant" required>
+                </div>
+                <div class="form-group">
+                    <label>Email</label>
+                    <input type="email" placeholder="your@email.com" required>
+                </div>
+                <div class="form-group">
+                    <label>Phone</label>
+                    <input type="tel" placeholder="+91 9876543210" required>
+                </div>
+                <div class="form-group">
+                    <label>Password</label>
+                    <input type="password" placeholder="••••••••" required>
+                </div>
+                <div style="display: flex; gap: 0.5rem;">
+                    <input type="checkbox" required>
+                    <p style="font-size: 0.9rem; color: var(--text-light);">I agree to the Terms of Service and Privacy Policy</p>
+                </div>
+                <button class="btn btn-primary" style="width: 100%;">Create Account</button>
+                <p style="text-align: center; color: var(--text-light);">Already have an account? <a href="#" style="color: var(--primary); cursor: pointer;" (click)="closeModel('signupModal'); openModal('loginModal')">Login</a></p>
+            </form>
+        </div>
+    </div>
+
+    <div id="demoModal" class="modal">
+        <div class="modal-content">
+            <span class="close" (click)="closeModel('demoModal')">&times;</span>
+            <h2 class="modal-title">Request a Demo</h2>
+            <form style="display: flex; flex-direction: column; gap: 1rem;">
+                <div class="form-group">
+                    <label>Your Name</label>
+                    <input type="text" placeholder="John Doe" required>
+                </div>
+                <div class="form-group">
+                    <label>Business Email</label>
+                    <input type="email" placeholder="your@restaurant.com" required>
+                </div>
+                <div class="form-group">
+                    <label>Restaurant Name</label>
+                    <input type="text" placeholder="Your Restaurant" required>
+                </div>
+                <div class="form-group">
+                    <label>Number of Locations</label>
+                    <select required>
+                        <option value="">Select</option>
+                        <option>1</option>
+                        <option>2-5</option>
+                        <option>5-10</option>
+                        <option>10+</option>
+                    </select>
+                </div>
+                <div class="form-group">
+                    <label>Preferred Date & Time</label>
+                    <input type="datetime-local" required>
+                </div>
+                <button class="btn btn-primary" style="width: 100%;">Schedule Demo</button>
+            </form>
+        </div>
+    </div>
+
+    <!-- <script>
+        function toggleMenu() {
+            const navLinks = document.getElementById('navLinks');
+            const hamburger = document.getElementById('hamburger');
+            const navButtons = document.getElementById('navButtons');
+            
+            navLinks.classList.toggle('active');
+            hamburger.classList.toggle('active');
+
+            if (navLinks.classList.contains('active')) {
+                const mobileAuthItems = document.querySelectorAll('.mobile-auth');
+                mobileAuthItems.forEach(item => {
+                    item.style.display = 'flex';
+                });
+            } else {
+                const mobileAuthItems = document.querySelectorAll('.mobile-auth');
+                mobileAuthItems.forEach(item => {
+                    item.style.display = 'none';
+                });
+            }
+        }
+
+        function openModal(modalId) {
+            document.getElementById(modalId).style.display = "block";
+            document.body.style.overflow = "hidden";
+        }
+
+        function closeModal(modalId) {
+            document.getElementById(modalId).style.display = "none";
+            document.body.style.overflow = "auto";
+        }
+
+        function scrollToSection(sectionId) {
+            const element = document.getElementById(sectionId);
+            if (element) {
+                element.scrollIntoView({ behavior: 'smooth' });
+                const navLinks = document.getElementById('navLinks');
+                const hamburger = document.getElementById('hamburger');
+                navLinks.classList.remove('active');
+                hamburger.classList.remove('active');
+                const mobileAuthItems = document.querySelectorAll('.mobile-auth');
+                mobileAuthItems.forEach(item => {
+                    item.style.display = 'none';
+                });
+            }
+        }
+
+        window.(click) = function(event) {
+            const loginModal = document.getElementById('loginModal');
+            const signupModal = document.getElementById('signupModal');
+            const demoModal = document.getElementById('demoModal');
+            
+            if (event.target == loginModal) {
+                loginModal.style.display = "none";
+                document.body.style.overflow = "auto";
+            }
+            if (event.target == signupModal) {
+                signupModal.style.display = "none";
+                document.body.style.overflow = "auto";
+            }
+            if (event.target == demoModal) {
+                demoModal.style.display = "none";
+                document.body.style.overflow = "auto";
+            }
+        }
+
+        // Show/hide nav buttons on mobile based on screen size
+        function handleResize() {
+            const navButtons = document.getElementById('navButtons');
+            if (window.innerWidth <= 768) {
+                navButtons.style.display = 'none';
+            } else {
+                navButtons.style.display = 'flex';
+            }
+        }
+
+        window.addEventListener('resize', handleResize);
+        handleResize();
+    </script> -->

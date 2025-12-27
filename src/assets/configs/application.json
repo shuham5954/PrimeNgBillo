@@ -1,0 +1,17 @@
+{
+    "NextRefreshInMilliSeconds": 120000,
+    "NextCacheRefreshInMilliSeconds": 120000,
+    "pageId": {
+        "OperationsMap": 1,
+        "AdvanceOperationsDashboard": 2,
+        "RouteEditor": 3,
+        "DataSourceComparison": 4,
+        "ExTool": 5,
+        "HistroicalEventSearch": 6
+    },
+    "footer": {
+        "Organization": "Kisnn Associates Inc",
+        "Infosense": "Infosenseglobal Inc",
+        "CopyRight": "Copyright &copy; {} TRANSCOM All Rights Reserved."
+    }
+}
