@@ -1,3 +1,9 @@
+
+
+@tailwind base;
+@tailwind components;
+@tailwind utilities;
+
 /* You can add global styles to this file, and also import other style files */
 * {
   margin: 0;
@@ -17,8 +23,28 @@ body {
   --light: #f8f9fa;
   --dark: #1a1a1a;
   --text-light: #666;
+  --p-primary-color: #BE0025 !important;
+  --p-primary-hover-color:#a30021 !important;
 }
 
 html {
   scroll-behavior: smooth;
 }
+
+.p-tree-node-content.p-tree-node-selected {
+  background-color: #fdd9d9 !important;
+  color: #d02071 !important;
+}
+.p-tree-node-content.p-tree-node-selected {
+  background-color: #fdd9d9 !important;
+  color: #d02071 !important;
+}
+
+:host ::ng-deep .p-tree-node-content.p-tree-node-selected:hover {
+  background-color: #fcbfbf !important;
+}
+
+:host ::ng-deep .p-tree-node-content.p-tree-node-selected:focus {
+  box-shadow: 0 0 0 2px rgba(208, 32, 113, 0.4) !important;
+}
+

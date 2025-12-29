@@ -1,0 +1,16 @@
+.p-tree-node-content.p-tree-node-selected {
+  background-color: #fdd9d9 !important;
+  color: #d02071 !important;
+}
+.p-tree-node-content.p-tree-node-selected {
+  background-color: #fdd9d9 !important;
+  color: #d02071 !important;
+}
+
+:host ::ng-deep .p-tree-node-content.p-tree-node-selected:hover {
+  background-color: #fcbfbf !important;
+}
+
+:host ::ng-deep .p-tree-node-content.p-tree-node-selected:focus {
+  box-shadow: 0 0 0 2px rgba(208, 32, 113, 0.4) !important;
+}
